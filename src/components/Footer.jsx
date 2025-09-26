@@ -10,7 +10,7 @@ function Footer() {
           
          
           <div className="flex space-x-4 mt-2 sm:mt-0">
-            <a href="https://www.linkedin.com/in/akhilraju7/" className="">About Creator</a>
+            <a href="https://www.linkedin.com/in/akhilraju7/" className="">About Creator </a>
            
           </div>
         </div>
