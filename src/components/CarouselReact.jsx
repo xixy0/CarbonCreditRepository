@@ -75,8 +75,8 @@ export function CarouselReact() {
                         />
                         <div className ={`absolute inset-0 bg-gray-600/60  flex flex-col items-center justify-center text-center px-6 transition-all duration-700 ease-in-out 
                             ${index==current? "opacity-100 transition-y-0" : "opacity-0 transition-y-10"}`}>
-                            <h2 className=" text-2xl font-semibold mb-4 md:text-4xl ">{slide.title}</h2>
-                            <p className="max-w-3xl text-base md:text-lg ">{slide.text}</p>
+                            <h2 className=" text-2xl font-bold mb-4 md:text-4xl ">{slide.title}</h2>
+                            <p className="max-w-3xl font-semibold text-base md:text-lg ">{slide.text}</p>
                         </div>
                     </div>
 
