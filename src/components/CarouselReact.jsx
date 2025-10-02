@@ -18,7 +18,7 @@ export function CarouselReact() {
             src: "https://ec.europa.eu/eurostat/documents/4187653/15727800/martin33_AdobeStock_66652891_RV.jpg",
             alt: "Effects of CO2",
             title: "How does CO2 harm?",
-            text: "Carbon dioxide (CO2) is an important heat-trapping gas, also known as a greenhouse gas, that comes from the extraction and burning of fossil fuels (such as coal, oil, and natural gas), from wildfires, and natural processes like volcanic eruptions. The first graph shows atmospheric CO2 levels measured by NOAA at Mauna Loa Observatory, Hawaii, since 1958. The second graph shows CO2 levels during Earth’s last three glacial cycles, as captured by air bubbles trapped in ice sheets and glaciers.",
+            text: "Carbon dioxide (CO2) is an important heat-trapping gas, also known as a greenhouse gas, that comes from the extraction and burning of fossil fuels (such as coal, oil, and natural gas), from wildfires, and natural processes like volcanic eruptions. The CO2 levels during Earth’s last three glacial cycles, as captured by air bubbles trapped in ice sheets and glaciers.",
         },
     ];
 
@@ -34,7 +34,7 @@ export function CarouselReact() {
         resetTimer();
         timer.current = setInterval(() => {
             setCurrent((prev) => (prev + 1) % slides.length);
-        }, 5000)
+        }, 4000)
     }
 
     useEffect(() => {
