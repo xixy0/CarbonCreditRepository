@@ -64,8 +64,9 @@ export function CarouselReact() {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}>
                 {slides.map((slide, index) => (
+                    
                     <div key={index}
-                     className={`absolute inset-0  w-full h-196 object-cover transition-opacity duration-700 ease-in-out ${index === current ? "opacity-100" : "opacity-0"
+                     className={`absolute inset-0  w-full h-196 object-cover transition duration-700 ease-in-out transform ${index === current ? "opacity-100 scale-100 z-20 " : "opacity-0 scale-95 z-10 "
                                 }`}>
                         <img
                             src={slide.src}
@@ -73,7 +74,7 @@ export function CarouselReact() {
                             className="w-full h-full object-cover"
                            
                         />
-                        <div className ={`absolute inset-0 bg-gray-600/60  flex flex-col items-center justify-center text-center px-6 transition-all duration-700 ease-in-out 
+                        <div className ={`absolute inset-0 bg-gray-600/60  flex flex-col items-center justify-center text-center px-6 transition-all duration-700 ease-in-out transform
                             ${index==current? "opacity-100 transition-y-0" : "opacity-0 transition-y-10"}`}>
                             <h2 className=" text-2xl font-bold mb-4 md:text-4xl ">{slide.title}</h2>
                             <p className="max-w-3xl font-semibold text-base md:text-lg ">{slide.text}</p>
@@ -86,19 +87,19 @@ export function CarouselReact() {
 
             <button
                 onClick={prevSlide}
-                className="absolute top-1/2 left-4 -translate-y-1/2  bg-gray-300/70 text-black p-3 rounded-full hover:bg-gray-300/40 transition"
+                className="absolute top-1/2 left-4 -translate-y-1/2 z-40 bg-gray-300/70 text-black p-3 rounded-full hover:bg-gray-300/40 "
             >
                 ❮
             </button>
             <button
                 onClick={nextSlide}
-                className="absolute top-1/2 right-4 -translate-y-1/2  bg-gray-300/70 text-black p-3 rounded-full hover:bg-gray-300/40 transition"
+                className="absolute top-1/2 right-4 -translate-y-1/2 z-40 bg-gray-300/70 text-black p-3 rounded-full hover:bg-gray-300/40 "
             >
                 ❯
             </button>
 
 
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-40 flex space-x-3">
                 {slides.map((_, index) => (
                     <button
                         key={index}
