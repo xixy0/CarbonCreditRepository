@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import initialCreditData from "../credits.json";
 import jsPDF from "jspdf";
+import "../index.css"
+
 
 
 
@@ -80,7 +82,7 @@ function Dashboard() {
      
 
      
-      <div className="flex  gap-3 mb-6">
+      <div className="flex text-black gap-3 mb-6">
         <input
           type="text"
           value={searchData}
@@ -92,7 +94,7 @@ function Dashboard() {
         />
         <button
           onClick={filterData}
-          className="px-5 py-3 bg-green-700 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition"
+          className="px-5 py-3 bg-green-700 text-white font-semibold rounded-lg shadow hover:bg-green-600 transition !important"
         >
           Search
         </button>
@@ -115,7 +117,7 @@ function Dashboard() {
               {filteredData.map((credit) => (
                 <tr
                   key={credit.unic_id}
-                  className="border-b hover:bg-gray-50 transition"
+                  className="border-b hover:bg-gray-50 transition text-black"
                 >
                   <td className="p-3">{credit.unic_id}</td>
                   <td className="p-3">{credit.project_name}</td>

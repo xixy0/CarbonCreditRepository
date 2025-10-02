@@ -1,11 +1,13 @@
 import React from 'react'
+import { CarouselReact } from './CarouselReact'
+
+
 
 function MainPage() {
   return (
-   <div className="p-8 w-screen h-screen mx-auto  bg-amber-50">
-     <div className="p-8 max-w-5xl mx-auto">
-            
-     </div>
+   <div className="px-10 py-4 min-h-screen flex flex-col justify-center bg-amber-50">
+     <CarouselReact/>
+     
      </div>
   )
 }
